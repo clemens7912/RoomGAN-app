@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120sdp"
+    android:layout_margin="@dimen/_4sdp"
+    app:cardBackgroundColor="#8ddaeb">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/sourceImage"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:clickable="false"
+            android:layout_margin="@dimen/_2sdp">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/targetImage"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:clickable="false"
+            android:layout_margin="@dimen/_2sdp">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/generatedImage"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:clickable="false"
+            android:layout_margin="@dimen/_2sdp">
+        </ImageView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

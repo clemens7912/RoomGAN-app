@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8ddaeb">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="RoomGAN"
+            android:background="#8ddaeb">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/sourceImage"
+                    android:layout_width="@dimen/_125sdp"
+                    android:layout_height="@dimen/_125sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+                <TextView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/sourceImage"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:background="#80000000"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:text="Source room"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/targetImage"
+                    android:layout_width="@dimen/_125sdp"
+                    android:layout_height="@dimen/_125sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+                <TextView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/targetImage"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:background="#80000000"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:text="Target room"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sendImages"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_258sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:backgroundTint="#db6060"
+            android:text="Generate room"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/generatedImageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/generatedImage"
+            android:layout_width="@dimen/_258sdp"
+            android:layout_height="@dimen/_258sdp"
+            android:layout_gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/saveImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/generatedImage"
+            android:layout_alignRight="@+id/generatedImage"
+            android:src="@drawable/ic_save"/>
+
+        <TextView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/generatedImage"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="#80000000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:text="Target room"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

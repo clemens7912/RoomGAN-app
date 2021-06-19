@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8ddaeb">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="RoomGAN">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        tools:context=".Login">
+
+        <EditText
+            android:id="@+id/registerUsername"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/login_edittext"
+            android:drawableLeft="@drawable/ic_user_white"
+            android:gravity="left"
+            android:hint="@string/username"
+            android:textColorHint="#73FFFFFF"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/registerMail"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/login_edittext"
+            android:drawableLeft="@drawable/ic_mail_white"
+            android:gravity="left"
+            android:hint="@string/mail"
+            android:textColorHint="#73FFFFFF"
+            android:inputType="textEmailSubject"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/login_edittext"
+            android:drawableLeft="@drawable/ic_lock_white"
+            android:drawableRight="@drawable/ic_visible_white"
+            android:gravity="left"
+            android:hint="@string/password"
+            android:textColorHint="#73FFFFFF"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/registerpassword2"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/login_edittext"
+            android:drawableLeft="@drawable/ic_lock_white"
+            android:drawableRight="@drawable/ic_visible_white"
+            android:gravity="left"
+            android:hint="@string/password"
+            android:textColorHint="#73FFFFFF"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/wrongPassword"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:gravity="left"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            android:text=""
+            android:textSize="15sp"
+            android:textColor="#F00"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/passwordConditions"
+            android:textColor="#000000"
+            android:textSize="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="start">
+
+            <CheckBox
+                android:id="@+id/uppercaseCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:clickable="false"
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/uppercase"
+                android:id="@+id/uppercaseText"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="start">
+
+            <CheckBox
+                android:id="@+id/lowercaseCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:clickable="false"
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/lowercase"
+                android:id="@+id/lowercaseText"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="start">
+
+            <CheckBox
+                android:id="@+id/numberCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:clickable="false"
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/number"
+                android:id="@+id/numberText"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="start">
+
+            <CheckBox
+                android:id="@+id/specialCharacterCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:clickable="false"
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/specialCharacter"
+                android:id="@+id/specialCharacterText"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/createAccount"
+            android:textAllCaps="false"
+            android:backgroundTint="#db6060"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
